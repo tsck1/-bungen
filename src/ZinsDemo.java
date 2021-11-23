@@ -1,33 +1,33 @@
 public class ZinsDemo {
 
     public static void main(String[] args) {
-        double kontostand = 9000;
-        double zinsen = 2;
-        double berechneteZinsen =0;
 
-        double erhalteneZinsen = kontostand*zinsen/100;
-        System.out.println("Zinsen =" +zinsen+ " % " + kontostand +" = " +erhalteneZinsen);
+        double kontostand = 1000;
+        double zinsen = 2.5;
 
-        kontostand = 5000;
-        zinsen = 4;
-        erhalteneZinsen = kontostand*zinsen/100;
-        //berechneZinsen = 0;
+       // double zinsertrag = kontostand/100 *zinsen;
 
-        System.out.println(erhalteneZinsen);
+       // System.out.println(zinsertrag);
+       // printZinsen(kontostand,zinsen,zinsertrag);
 
+        zinsen =3.5;
+        kontostand=4000;
+        printZinsen(kontostand,zinsen,berechneZinsen(kontostand,zinsen));
 
-        printZinsen(kontostand, zinsen, erhalteneZinsen);
-        System.out.println(berechneZinsen(kontostand,zinsen,erhalteneZinsen));
 
     }
-    public static double berechneZinsen(double kontostand, double zinsen, double erhalteneZinsen){
-        zinsen =2.5;
-       erhalteneZinsen = kontostand * zinsen/100;
-        return erhalteneZinsen;
 
-       // return kontostand * zinsen / 100;
+    public static void printZinsen(double kontostand,double zinsen,double zinsertrag){
+
+        System.out.println("Kontostand = "+kontostand+", Zinsen: "+ zinsen+ " , Zinsertrag =" +zinsertrag);
+
     }
-    public static void printZinsen(double kontostand, double zinsen, double erhalteneZinsen) {
-        System.out.println("Zinsen = " + zinsen + " %von " + kontostand + " = " + erhalteneZinsen);
+
+    public static double berechneZinsen(double kontostand,double zinsen){
+
+        double zinsertrag = kontostand*zinsen/100;
+      return zinsertrag;
     }
 }
+
+
